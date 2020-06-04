@@ -42,14 +42,9 @@ function xcLibrary(name, numid, phone) {
     sleep(1000);
     press(600, 900, 2000);
     text("识别图中的二维码").findOne().parent().click();
-    sleep(1000);
-    if (textContains("很抱歉")) {
-        alert("预约失败");
-    } else {
-        input(0, name);
-        input(1, numid);
-        input(2, phone);
-        text("提交").findOne().click();
-    }
+    // sleep(2000);
+    // id("q1").findOne().setText(name);
+    // id("q2").findOne().setText(numid);
+    // id("q3").findOne().setText(phone);
     w.close();
 }
